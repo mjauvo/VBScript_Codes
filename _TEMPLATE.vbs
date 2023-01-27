@@ -25,7 +25,7 @@ Dim objFSO:             Set objFSO = CreateObject("Scripting.FileSystemObject")
 Dim objFileToWrite:     Set objFileToWrite = objFSO.OpenTextFile(targetFileDir + targetFile, 2, true)
 
 Dim shellAPP:           Set shellAPP = CreateObject("Shell.Application")
-Dim folderNamespace:    Set folderNamespace = shellAPP.Namespace("<absolute folder path>")
+Dim folderNamespace:    Set folderNamespace = shellAPP.Namespace(targetFileDir)
 
 ' ----------------------------------------------------------------------
 '  Methods
